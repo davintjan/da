@@ -159,7 +159,8 @@
 
           <!-- Post -->
           <article id="projects" class="box post post-excerpt">
-            <header style="margin-bottom: 10px">
+
+            <header id="steerable_needle" style="margin-bottom: 10px">
               <h2 style="text-align: center; font-size: 72px;"><a href="#">Projects</a></h2>
               <p style="text-align: center; font-size: 42px;">
                 <strong>Steerable Tape-Spring Needle for Autonomous Sharp Turns Through Tissue</strong>
@@ -226,6 +227,66 @@
                 autonomous steering systems
               </li>
             </ul>
+
+            <header
+            id="Passive_DS_Contact"
+            style="margin-top: 10px; margin-bottom: 0px"
+          >
+            <!-- Added small margin-top -->
+            <p style="text-align: center; font-size: 42px;">
+              <strong>Development of Passive Compliance Controller with Force Regulation</strong>
+            </p>
+          </header>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: auto;
+              margin-bottom: 10px;
+            "
+          >
+          <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin-bottom: 10px;
+          "
+        >
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0WZ7-1S0WQE?si=pVuoP3p_mcwgmpY9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+          </div>
+          <strong>Background</strong>
+          <p style="text-align: justify; font-size: 18px;">
+            The main challenge in contact-rich tasks is ensuring that the controller maintains compliance. In tasks such as insertion, where the end-effector must drag across a surface, force sensor measurements can become noisy. This noise can lead to unstable robot control. For example, if an external force suddenly pushes the end-effector from the right, the robot may retract to the left. However, in a constrained environment like a tight channel, this retraction could cause the robot to collide with the left side, triggering another reaction force that pushes it back to the right. This cycle can result in uncontrolled oscillations.
+          </p>
+          <p style="text-align: justify; font-size: 18px;">
+            To address this issue, a passive dynamical system is implemented to dissipate energy and maintain passivity. The system continuously updates its damping matrix in real time, adjusting compliance in response to external disturbances. By controlling the eigenvalues of the damping matrix, the robot can regulate the applied force and maintain a steady interaction with the surface.
+          </p>
+
+          <strong>Key Responsibilities:</strong>
+          <ul
+            style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
+          >
+            <!-- Added margin-top, kept margin-bottom at 0 -->
+            <li>
+              Developed passive impedance control with force regulation on Kuka LBR IIWA robot for contact-rich tasks 
+            </li>
+            <li>
+              Developed and simulated tasks in ROS using Gazebo to optimize robot performance before real-world deployment 
+            </li>
+            <li>
+              Integrated kinematics and path-planning with camera-based object detection for versatile task execution 
+            </li>
+            <li>
+              Implemented energy tank concept to ensure controller stability for human robot collaboration 
+            </li>
+            <li>
+              Employed learning algorithm (LPVDS) in Matlab to create a stable dynamical system based on minimum amount of demonstration (less than 20)
+            </li>
+          </ul>
 
             <header
               id="robot-arm-control"
@@ -756,7 +817,12 @@
           <li>
             <a href="#projects">Projects</a>
             <ul>
-              <li><a href="#projects">2D Steerable Needles</a></li>
+              <li><a href="#steerable_needle">2D Steerable Needles</a></li>
+              <li>
+                <a href="#Passive_DS_Contact"
+                  >Passive Contact DS</a
+                >
+              </li>
               <li>
                 <a href="#robot-arm-control"
                   >Construction Robot Arm Control and Learning</a
