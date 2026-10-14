@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LiRA · Davin Tjandra</title>
+    <meta
+      name="description"
+      content="LiRA: a reactive control layer that lets a pretrained diffusion policy drive different robot arms while avoiding collisions."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="../index.html">Davin Tjandra</a>
+        <nav class="nav">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#publications" class="hide-sm">Publications</a>
+          <a
+            href="https://drive.google.com/file/d/1XE6uDH8KvG32tiVJxi-hi0fYt_D9xmmk/view?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            >CV</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap narrow">
+      <a class="back" href="../index.html#projects">← All projects</a>
+
+      <div class="project-head">
+        <h1>LiRA: Lightweight Reactive Arm Control</h1>
+        <p class="lede">
+          A control layer that lets a pretrained diffusion policy drive
+          different robot arms while avoiding self-collision, the table and
+          moving obstacles.
+        </p>
+        <div class="facts">
+          <span><b>Type</b>Personal project</span>
+          <span><b>Year</b>2026</span>
+          <span><b>Stack</b>Python, MuJoCo, OSQP, PyTorch</span>
+          <span><b>Code</b><a href="https://github.com/davintjan/lira" target="_blank" rel="noopener">github.com/davintjan/lira</a></span>
+        </div>
+      </div>
+
+      <div class="media-grid">
+        <figure>
+          <img src="../vids/lira/iiwa_pusht_front.webp" alt="KUKA iiwa14 playing Push-T, front view" />
+          <figcaption>KUKA iiwa14, front</figcaption>
+        </figure>
+        <figure>
+          <img src="../vids/lira/iiwa_pusht_top.webp" alt="KUKA iiwa14 playing Push-T, top view" />
+          <figcaption>KUKA iiwa14, top</figcaption>
+        </figure>
+        <figure>
+          <img src="../vids/lira/ur_pusht_front.webp" alt="UR5e playing Push-T, front view" />
+          <figcaption>UR5e, front</figcaption>
+        </figure>
+        <figure>
+          <img src="../vids/lira/ur_pusht_top.webp" alt="UR5e playing Push-T, top view" />
+          <figcaption>UR5e, top</figcaption>
+        </figure>
+      </div>
+
+      <div class="prose">
+        <h2>Problem</h2>
+        <p>
+          Learned policies such as Diffusion Policy output where the end-effector
+          should go, but they know nothing about the arm that has to get it
+          there: its joint limits, its own links, the table, or an obstacle
+          entering the workspace. Running them directly on a robot arm is
+          unsafe.
+        </p>
+
+        <h2>Approach</h2>
+        <p>
+          LiRA sits between the policy and the robot. It plans once offline and
+          then reacts live:
+        </p>
+        <ul>
+          <li>
+            <b>Planning.</b> A joint-space trajectory planner in two variants:
+            gradient descent, and a TrajOpt-style trust-region SQP that treats
+            collision as a hard constraint through an exact L1 penalty.
+          </li>
+          <li>
+            <b>Stable velocity field.</b> The planned path becomes a globally
+            exponentially stable velocity field, using a Lyapunov function
+            fitted to each path with a small LP (milliseconds per plan), in the
+            spirit of LPV-DS but without a GMM or SDP.
+          </li>
+          <li>
+            <b>Safety filter.</b> A CBF-QP running at 500 Hz on capsule and box
+            clearances, with a task-space metric so the filter prefers motions
+            the task does not care about.
+          </li>
+          <li>
+            <b>Robot-agnostic.</b> The core runs on any arm MuJoCo can load.
+            Adding a robot only needs a scene file and one config entry.
+          </li>
+        </ul>
+
+        <h2>Result</h2>
+        <p>
+          A KUKA iiwa14 and a UR5e play Push-T in MuJoCo with the original
+          Diffusion Policy checkpoint, used as is with no retraining. Each run
+          starts with the arm away from the table, so SQP first plans a path
+          into the workspace, then the policy takes over. Policy inference runs
+          in a background thread, as it would on a real robot, and its actions
+          go through a dynamical-system controller that follows the policy while
+          moving the arm out of the way of an obstacle.
+        </p>
+        <p>
+          The robot only knows where the obstacle is right now, not where it is
+          heading, so all of the dodging is purely reactive. The demo is not
+          vision-based yet: the pose of the T comes straight from the simulator
+          rather than being estimated from a camera.
+        </p>
+      </div>
+
+      <a class="back" href="../index.html#projects" style="margin-bottom: 64px">← All projects</a>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 Davin Tjandra</span>
+        <a href="mailto:davintjan@gmail.com">davintjan@gmail.com</a>
+      </div>
+    </footer>
+  </body>
+</html>

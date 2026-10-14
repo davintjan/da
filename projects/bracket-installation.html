@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bracket Installation · Davin Tjandra</title>
+    <meta name="description" content="Force control and imitation learning for robot arms that install brackets in construction." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="../index.html">Davin Tjandra</a>
+        <nav class="nav">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#publications" class="hide-sm">Publications</a>
+          <a href="https://drive.google.com/file/d/1XE6uDH8KvG32tiVJxi-hi0fYt_D9xmmk/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap narrow">
+      <a class="back" href="../index.html#projects">← All projects</a>
+
+      <div class="project-head">
+        <h1>Force Control and Imitation Learning for Bracket Installation</h1>
+        <p class="lede">Compliance control and a learned insertion policy for construction robot arms, reaching a 95% installation success rate.</p>
+        <div class="facts">
+          <span><b>Company</b>Raise Robotics</span>
+          <span><b>Role</b>Control Engineer</span>
+          <span><b>Year</b>Summer 2024</span>
+          <span><b>Stack</b>Python, PyTorch, ROS</span>
+        </div>
+      </div>
+
+      <div class="media">
+        <video controls preload="metadata" playsinline><source src="../vids/Raise_Porto.mp4" type="video/mp4" /></video>
+      </div>
+
+      <div class="prose">
+        <h2>Problem</h2>
+        <p>
+          The project had two parts. First, move the force and compliance
+          controller from the UR20 arms to the FR20 arms with the same
+          performance. Second, learn a model that inserts brackets automatically
+          from a start pose and an estimated goal pose. The perception system
+          that estimates the goal has errors of up to ±2° in orientation plus
+          some translation error, so the model has to compensate for them.
+        </p>
+
+        <h2>Approach</h2>
+        <ul>
+          <li>
+            Compliance and force control for contact tasks such as channel search,
+            bracket alignment and nut tightening and loosening.
+          </li>
+          <li>A behavior-tree state machine for smooth, deterministic transitions between steps.</li>
+          <li>An imitation learning model in PyTorch, trained on data from an automated collection pipeline.</li>
+          <li>
+            Hardware setup: launch files, URDF, controller gains, and mounts for
+            the force-torque sensor, pneumatics and tool changer.
+          </li>
+        </ul>
+
+        <h2>Result</h2>
+        <p>
+          After tuning stiffness, PD and error-scale gains, bracket installation
+          reached a 95% success rate. The learned insertion model matched expert
+          trajectories with a position and orientation RMSE below 0.0001.
+        </p>
+      </div>
+
+      <a class="back" href="../index.html#projects" style="margin-bottom: 64px">← All projects</a>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 Davin Tjandra</span>
+        <a href="mailto:davintjan@gmail.com">davintjan@gmail.com</a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

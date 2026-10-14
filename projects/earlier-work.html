@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Earlier Work · Davin Tjandra</title>
+    <meta name="description" content="Earlier mechanical and mechatronics projects by Davin Tjandra." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="../index.html">Davin Tjandra</a>
+        <nav class="nav">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#publications" class="hide-sm">Publications</a>
+          <a href="https://drive.google.com/file/d/1XE6uDH8KvG32tiVJxi-hi0fYt_D9xmmk/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap narrow">
+      <a class="back" href="../index.html#projects">← All projects</a>
+
+      <div class="project-head">
+        <h1>Earlier work</h1>
+        <p class="lede">Mechanical and mechatronics projects from coursework and my undergraduate studies.</p>
+      </div>
+
+      <div class="subproject" id="mecanum">
+        <h2>4-Wheeled Mecanum Drive Mobile Base</h2>
+        <span class="meta">Mechatronics course, University of Pennsylvania · 2023</span>
+        <div class="media">
+          <img src="../img/mecanum.jpg" alt="The mecanum drive mobile base" />
+          <div class="media-grid" style="margin: 0">
+            <button class="yt" data-id="RxnCSf2Vcbw" aria-label="Play video: mecanum base driving"></button>
+            <button class="yt" data-id="vjwg3EuP6zI" aria-label="Play video: mecanum base on the course"></button>
+          </div>
+        </div>
+        <div class="prose">
+          <ul>
+            <li>WiFi-based control and localisation on an ESP32.</li>
+            <li>I2C for the sensors and ESP-NOW for board-to-board communication, cutting physical connections in the electrical assembly by 80%.</li>
+            <li>Design drawings and manufacturing files in SolidWorks, Autodesk Inventor and DraftSight.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subproject" id="soft-actuator">
+        <h2>Soft Actuator and Variable Stiffness Link</h2>
+        <span class="meta">Bachelor's thesis, University of Indonesia · 2022</span>
+        <div class="media">
+          <video controls preload="metadata" playsinline><source src="../vids/soft_actuator.mp4" type="video/mp4" /></video>
+        </div>
+        <div class="prose">
+          <p>
+            Rigid robots are precise but unsafe around fragile objects and people.
+            I modified a pneumatic silicone actuator, originally developed at
+            Harvard as a grasping mechanism for hand rehabilitation, to produce
+            more force so it could drive an elbow mechanism. A variable stiffness
+            link lets the stiffness of the system be adjusted as needed.
+          </p>
+          <ul>
+            <li>9 N of lifting force at 37 kPa.</li>
+            <li>Up to 3× stiffness when the link is stiffened, compared with its relaxed state.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subproject" id="cable-robot">
+        <h2>Cable-Driven Teleoperated Robot Arm</h2>
+        <span class="meta">University of Indonesia</span>
+        <div class="media">
+          <img src="../img/cable_robot.jpg" alt="Cable-driven robot arm design" />
+        </div>
+        <div class="prose">
+          <ul>
+            <li>A cable drive lowers the arm's moment of inertia by moving the motors close to the shoulder.</li>
+            <li>Less material on the lower arm, so the whole arm is lighter.</li>
+            <li>A pulley mechanism at the elbow increases torque by 20×.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subproject" id="shell-eco">
+        <h2>Shell Eco-marathon Virtual Off-track 2021</h2>
+        <span class="meta">University of Indonesia · 2021 · Safety Award runner-up</span>
+        <div class="media">
+          <img src="../img/shell_eco.jpg" alt="Shell Eco-marathon car prototype analysis" />
+        </div>
+        <div class="prose">
+          <ul>
+            <li>Improved fuel efficiency by reducing component weight and optimizing the flow around the car.</li>
+            <li>Topology optimization cut component mass by 54% on average.</li>
+            <li>Vortex generators for passive flow control reduced drag by 14.74%.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subproject" id="ebike">
+        <h2>High-Torque, Self-Recharging Conversion E-Bike</h2>
+        <span class="meta">University of Indonesia · 2021 – 2022 · Indonesian patent</span>
+        <div class="media">
+          <button class="yt" data-id="DO-1V5IpRmU" aria-label="Play video: conversion e-bike"></button>
+        </div>
+        <div class="prose">
+          <ul>
+            <li>A mountain bike conversion with a pinion and pulley system that increases torque by 8.75×.</li>
+            <li>Charges from the rotation of the wheel, with a knockdown system for easy fitting and removal.</li>
+            <li>Best Presenter at INSITEF 2022.</li>
+          </ul>
+        </div>
+      </div>
+
+      <a class="back" href="../index.html#projects" style="margin-bottom: 64px">← All projects</a>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 Davin Tjandra</span>
+        <a href="mailto:davintjan@gmail.com">davintjan@gmail.com</a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

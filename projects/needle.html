@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Steerable Tape-Spring Needle · Davin Tjandra</title>
+    <meta name="description" content="A tape-spring steerable needle that makes sharp turns through tissue, steered manually and robotically." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="../index.html">Davin Tjandra</a>
+        <nav class="nav">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#publications" class="hide-sm">Publications</a>
+          <a href="https://drive.google.com/file/d/1XE6uDH8KvG32tiVJxi-hi0fYt_D9xmmk/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap narrow">
+      <a class="back" href="../index.html#projects">← All projects</a>
+
+      <div class="project-head">
+        <h1>Steerable Tape-Spring Needle</h1>
+        <p class="lede">A new class of steerable needle that makes 15° to 150° turns through tissue with a turn radius as low as 3 mm.</p>
+        <div class="facts">
+          <span><b>Lab</b>MODLAB, University of Pennsylvania</span>
+          <span><b>Venue</b>ICRA 2025</span>
+          <span><b>Paper</b><a href="https://doi.org/10.1101/2024.09.22.614377" target="_blank" rel="noopener">bioRxiv</a></span>
+        </div>
+      </div>
+
+      <div class="media">
+        <video controls preload="metadata" playsinline><source src="../vids/needle_demo_vid.mp4" type="video/mp4" /></video>
+      </div>
+
+      <div class="prose">
+        <h2>Problem</h2>
+        <p>
+          Steerable needles reach hard-to-reach tissue with minimal invasion, but
+          wide turns damage the tissue around the path. A needle that can turn
+          sharply keeps that damage small.
+        </p>
+
+        <h2>Approach</h2>
+        <ul>
+          <li>Designed a tape-spring needle and derived and experimentally validated a geometric model for it.</li>
+          <li>Designed and built the steering system for linear actuation and out-of-plane steering.</li>
+          <li>Developed the needle kinematics and integrated a camera for path planning (RRT) and feedback control.</li>
+          <li>Moved the system to ROS to improve communication between software and hardware.</li>
+        </ul>
+
+        <h2>Result</h2>
+        <p>
+          We steered the needle manually and robotically along Dubins paths in
+          7 kPa and 13 kPa tissue phantoms, which mimic healthy and unhealthy
+          liver tissue, and measured how it handles stiffness transitions between
+          tissues. We also showed needle tip tracking with ultrasound, navigation
+          around anatomical obstacles, and integration with an autonomous robotic
+          steering system.
+        </p>
+      </div>
+
+      <a class="back" href="../index.html#projects" style="margin-bottom: 64px">← All projects</a>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 Davin Tjandra</span>
+        <a href="mailto:davintjan@gmail.com">davintjan@gmail.com</a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

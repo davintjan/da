@@ -1,910 +1,344 @@
-<!DOCTYPE html>
-<!--
-	Striped by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Davin Tjandra Portfolio</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Davin Tjandra</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+      name="description"
+      content="Davin Tjandra, robotics engineer working on robot control for contact-rich and collaborative tasks."
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="is-preload">
-    <!-- Content -->
-
-    <!-- <div class="iconss">   
-       <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="46"
-      height="46"
-      id="open_sidebar"
-      fill="currentColor"
-      class="bi bi-list active"
-      viewBox="0 0 16 16"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-      />
-    </svg>
-
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="46"
-      height="46"
-      fill="currentColor"
-      id="close_sidebar"
-      class="bi bi-arrow-bar-left"
-      viewBox="0 0 16 16"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"
-      />
-    </svg>
-  </div> -->
-
-    <div class="container">
-      <div id="content">
-        <div class="iconss">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            id="open_sidebar"
-            fill="currentColor"
-            class="bi bi-list active"
-            viewBox="0 0 16 16"
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="#">Davin Tjandra</a>
+        <nav class="nav">
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#publications" class="hide-sm">Publications</a>
+          <a
+            href="https://drive.google.com/file/d/1XE6uDH8KvG32tiVJxi-hi0fYt_D9xmmk/view?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            >CV</a
           >
-            <path
-              fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-            />
-          </svg>
+        </nav>
+      </div>
+    </header>
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            id="close_sidebar"
-            class="bi bi-arrow-bar-left"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"
-            />
-          </svg>
-        </div>
-        <div class="inner">
-          <div class="topbar">
-            <div class="mail">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-envelope"
-                viewBox="0 0 16 16"
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrap">
+          <div class="bio">
+            <h1>Davin Tjandra</h1>
+            <p class="role">Robotics Software Engineer at Intrinsic</p>
+            <p>
+              I'm a robotics engineer working on robot control, especially for
+              tasks where the robot is in contact with its environment or
+              working in a collaborative manner. My work combines classical
+              control with learning: compliance and force control, stable
+              dynamical systems, and safety filters that let learned policies
+              run on robot arms.
+            </p>
+            <p>
+              I'm currently a Robotics Software Engineer at Intrinsic, where I
+              develop and deploy robotic solutions for industrial clients.
+              Before that, I worked on steerable needles for medical procedures,
+              compliance control on the KUKA iiwa, and force-controlled robot
+              arms for construction. I hold an M.S. in Mechanical Engineering
+              (Mechatronics and Robotic Systems) from the University of
+              Pennsylvania and a bachelor's in Mechanical Engineering (cum
+              laude) from the University of Indonesia.
+            </p>
+            <div class="links">
+              <a
+                class="btn primary"
+                href="https://drive.google.com/file/d/1XE6uDH8KvG32tiVJxi-hi0fYt_D9xmmk/view?usp=sharing"
+                target="_blank"
+                rel="noopener"
+                >Resume</a
               >
-                <path
-                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
-                />
-              </svg>
-              <p>davintjan@gmail.com</p>
+              <a class="btn" href="https://github.com/davintjan" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn" href="https://www.linkedin.com/in/davin-tjandra" target="_blank" rel="noopener"
+                >LinkedIn</a
+              >
+              <a class="btn" href="mailto:davintjan@gmail.com">Email</a>
             </div>
-
-            <a href="https://drive.google.com/file/d/1_N1awq9U__ZJhtKPCDDxyQWSbb3zrGH8/view?usp=sharing" target="_blank">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-person-bounding-box"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5M.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5"
-                />
-                <path
-                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0"
-                />
-              </svg>
-              Resume</a
-            >
           </div>
-          <!-- Post -->
-          <article class="box post post-excerpt">
-            <header>
-              <!--
-									Note: Titles and subtitles will wrap automatically when necessary, so don't worry
-									if they get too long. You can also remove the <p> entirely if you don't
-									need a subtitle.
-								-->
-              <h2 style="text-align: center; font-size: 72px;"><a href="#"><strong>Davin Tjandra</strong></a></h2>
-              <p style="text-align: center">
-                <strong
-                  >Master Student | University of Pennsylvania | Robotics
-                  Researcher</strong
+          <img src="img/portrait.jpg" alt="Davin Tjandra at his Penn graduation next to a KUKA iiwa robot arm" />
+        </div>
+      </section>
+
+      <!-- Selected projects -->
+      <section id="projects">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Selected projects</h2>
+            <p>Control, learning and hardware work from research and industry.</p>
+          </div>
+
+          <div class="grid">
+            <a class="card" href="projects/lira.html">
+              <div class="thumb">
+                <img src="vids/lira/iiwa_pusht_front.webp" alt="KUKA iiwa14 playing Push-T in MuJoCo" />
+              </div>
+              <div class="body">
+                <span class="meta">Personal project · 2026</span>
+                <h3>LiRA: Reactive Arm Control for Learned Policies</h3>
+                <p>
+                  A control layer that lets a pretrained diffusion policy drive
+                  different robot arms while avoiding collisions and moving
+                  obstacles.
+                </p>
+                <div class="tags">
+                  <span class="tag">CBF-QP</span><span class="tag">Diffusion Policy</span
+                  ><span class="tag">SQP</span><span class="tag">MuJoCo</span>
+                </div>
+              </div>
+            </a>
+
+            <a class="card" href="projects/needle.html">
+              <div class="thumb">
+                <img src="img/thumb_needle.jpg" alt="Robot needle steering system" />
+              </div>
+              <div class="body">
+                <span class="meta">MODLAB, UPenn · ICRA 2025</span>
+                <h3>Steerable Tape-Spring Needle</h3>
+                <p>
+                  A needle that makes 15° to 150° turns through tissue with a
+                  turn radius as low as 3 mm, steered manually and robotically.
+                </p>
+                <div class="tags">
+                  <span class="tag">Medical Robotics</span><span class="tag">Kinematics</span
+                  ><span class="tag">RRT</span><span class="tag">ROS</span>
+                </div>
+              </div>
+            </a>
+
+            <a class="card" href="projects/passive-compliance.html">
+              <div class="thumb">
+                <img src="img/thumb_xLmZD9Djkdg.jpg" alt="KUKA iiwa running the passive compliance controller" />
+              </div>
+              <div class="body">
+                <span class="meta">Figueroa Lab, UPenn · 2024</span>
+                <h3>Passive Compliance Control with Force Regulation</h3>
+                <p>
+                  A passive impedance controller with an energy tank on the KUKA
+                  iiwa for stable contact-rich and collaborative tasks.
+                </p>
+                <div class="tags">
+                  <span class="tag">Impedance Control</span><span class="tag">Energy Tank</span
+                  ><span class="tag">LPV-DS</span><span class="tag">ROS</span>
+                </div>
+              </div>
+            </a>
+
+            <a class="card" href="projects/bracket-installation.html">
+              <div class="thumb">
+                <img src="img/thumb_bracket.jpg" alt="Robot arm inserting a bracket into a concrete wall" />
+              </div>
+              <div class="body">
+                <span class="meta">Raise Robotics · 2024</span>
+                <h3>Force Control and Imitation Learning for Bracket Installation</h3>
+                <p>
+                  Compliance control and a learned insertion policy for
+                  construction robot arms, reaching a 95% installation success
+                  rate.
+                </p>
+                <div class="tags">
+                  <span class="tag">Force Control</span><span class="tag">Imitation Learning</span
+                  ><span class="tag">Behavior Trees</span>
+                </div>
+              </div>
+            </a>
+
+            <a class="card" href="projects/depth-completion.html">
+              <div class="thumb">
+                <img src="img/ORB_SLAM2.jpg" alt="ORB-SLAM2 map built with completed depth" />
+              </div>
+              <div class="body">
+                <span class="meta">UPenn coursework · 2023</span>
+                <h3>Depth Completion for RGB-D SLAM</h3>
+                <p>
+                  A network that turns sparse LiDAR and a monocular camera into
+                  dense depth, used to improve ORB-SLAM2 accuracy.
+                </p>
+                <div class="tags">
+                  <span class="tag">Deep Learning</span><span class="tag">SLAM</span
+                  ><span class="tag">KITTI</span>
+                </div>
+              </div>
+            </a>
+
+            <a class="card" href="projects/franka.html">
+              <div class="thumb">
+                <img src="img/thumb_Z_s7S15IcpI.jpg" alt="Franka Panda arm doing pick and place" />
+              </div>
+              <div class="body">
+                <span class="meta">UPenn MEAM 5200 · 2023</span>
+                <h3>Control and Planning on the Franka Panda</h3>
+                <p>
+                  Kinematics, velocity control and path planning with
+                  camera-based object detection for pick-and-place.
+                </p>
+                <div class="tags">
+                  <span class="tag">IK</span><span class="tag">RRT</span
+                  ><span class="tag">Potential Fields</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <h3 style="margin: 56px 0 8px">Earlier work</h3>
+          <ul class="list">
+            <li>
+              <a class="title" href="projects/earlier-work.html#mecanum">4-Wheeled Mecanum Drive Mobile Base</a>
+              <span class="year">UPenn · 2023</span>
+              <span class="desc">WiFi control and localisation on ESP32, with ESP-NOW cutting wiring by 80%.</span>
+            </li>
+            <li>
+              <a class="title" href="projects/earlier-work.html#soft-actuator">Soft Actuator and Variable Stiffness Link</a>
+              <span class="year">Bachelor's thesis · 2022</span>
+              <span class="desc">A pneumatic silicone actuator producing 9 N of lift at 37 kPa, with 3× stiffness when locked.</span>
+            </li>
+            <li>
+              <a class="title" href="projects/earlier-work.html#cable-robot">Cable-Driven Teleoperated Robot Arm</a>
+              <span class="year">Univ. of Indonesia</span>
+              <span class="desc">A redesign that moves the motors to the shoulder, with a 20× torque elbow pulley.</span>
+            </li>
+            <li>
+              <a class="title" href="projects/earlier-work.html#shell-eco">Shell Eco-marathon Virtual Off-track</a>
+              <span class="year">2021</span>
+              <span class="desc">Topology optimization (54% average mass reduction) and vortex generators (14.7% less drag).</span>
+            </li>
+            <li>
+              <a class="title" href="projects/earlier-work.html#ebike">High-Torque Conversion E-Bike</a>
+              <span class="year">2021–2022</span>
+              <span class="desc">A self-recharging conversion kit with 8.75× torque, patented in Indonesia.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <div class="wrap left">
+          <div class="section-head"><h2>Experience</h2></div>
+          <ul class="timeline">
+            <li>
+              <span class="when">2025 – Present</span>
+              <div>
+                <h3>Robotics Software Engineer</h3>
+                <span class="org">Intrinsic · Mountain View, CA</span>
+                <p>
+                  Factory of the Future and Performance &amp; Reliability teams.
+                  Building and deploying robotic solutions for industrial
+                  clients, from simulation to on-site deployment.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="when">2025</span>
+              <div>
+                <h3>Teaching Assistant</h3>
+                <span class="org">Learning and Control for Adaptive and Reactive Robots, UPenn</span>
+                <p>Helped launch the graduate course and set up its PyBullet, ROS2 and MATLAB simulation frameworks.</p>
+              </div>
+            </li>
+            <li>
+              <span class="when">2024 – 2025</span>
+              <div>
+                <h3>Research Assistant</h3>
+                <span class="org">Figueroa Robotics Lab, UPenn</span>
+                <p>Passive impedance control with energy tanks and learned dynamical systems on the KUKA iiwa.</p>
+              </div>
+            </li>
+            <li>
+              <span class="when">Summer 2024</span>
+              <div>
+                <h3>Control Engineer</h3>
+                <span class="org">Raise Robotics · San Francisco, CA</span>
+                <p>Force control, behavior trees and imitation learning for construction bracket installation.</p>
+              </div>
+            </li>
+            <li>
+              <span class="when">2023 – 2025</span>
+              <div>
+                <h3>Research Assistant</h3>
+                <span class="org">MODLAB, UPenn</span>
+                <p>Led the steerable needle prototype, from the steering hardware to kinematics, planning and ROS integration.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications">
+        <div class="wrap left">
+          <div class="section-head"><h2>Publications</h2></div>
+          <ul class="pubs">
+            <li>
+              <div class="title">Steerable Tape-Spring Needle for Autonomous Sharp Turns Through Tissue</div>
+              <div class="authors">
+                Omar Abdoun, <b>Davin Tjandra</b>, Katie Yin, Pablo Kurzan, Jessica Yin, Mark Yim
+              </div>
+              <div class="venue"><i>ICRA 2025</i> · preprint on bioRxiv</div>
+              <div class="pub-links">
+                <a href="https://doi.org/10.1101/2024.09.22.614377" target="_blank" rel="noopener">Paper</a>
+                <a href="projects/needle.html">Video</a>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                High-Torque, Self-Recharging Conversion E-Bike with Knockdown System (Indonesian patent)
+              </div>
+              <div class="authors">
+                <b>Davin</b>, M. I. Mughni, K. D. Dani, A. E. Lianto, R. Dhelika
+              </div>
+              <div class="venue"><i>Indonesia Simple Patent S00202111212</i> · 2021</div>
+              <div class="pub-links">
+                <a
+                  href="https://dgip.go.id/uploads/berita_resmi/file/697e9c08a34dd5b0f49310c339c5e648.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >Patent gazette (p. 29)</a
                 >
-              </p>
-            </header>
-
-            <a href="#" class="image featured"
-              ><img src="images/homepage.png" alt=""
-            /></a>
-            <p style="text-align: justify; font-size: 20px;">
-              A Robotics Researcher with a focus on control systems,
-              particularly in the medical and construction industries. With a
-              solid background in industry and research, I am eager to
-              contribute to innovative projects that advance these fields.
-            </p>
-
-            <p style="text-align: justify; font-size: 20px;">
-              My educational journey, which includes a cum laude degree in
-              Mechanical Engineering from the University of Indonesia and
-              advanced studies at the University of Pennsylvania, has given me a
-              deep understanding of engineering principles. This, combined with
-              hands-on experience in automation design for sectors like
-              manufacturing, automotive, and biomedical, allows me to bring
-              valuable insights and skills to complex engineering challenges.
-            </p>
-          </article>
-
-          <!-- Post -->
-          <article id="projects" class="box post post-excerpt">
-
-            <header id="steerable_needle" style="margin-bottom: 10px">
-              <h2 style="text-align: center; font-size: 72px;"><a href="#">Projects</a></h2>
-              <p style="text-align: center; font-size: 42px;">
-                <strong>Steerable Tape-Spring Needle for Autonomous Sharp Turns Through Tissue</strong>
-              </p>
-            </header>
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: auto;
-                margin-bottom: 10px;
-              "
-            >
-              <video
-                style="max-width: 800px; width: 100%; height: auto"
-                controls
-              >
-                <source src="vids/needle_demo_vid.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <strong>Abstract</strong>
-            <p style="text-align: justify; font-size: 18px;">
-              Steerable needles offer a minimally invasive method to deliver
-              treatment to hard-to-reach tissue regions. We introduce a new
-              class of tape-spring steerable needles capable of sharp turns
-              ranging from 15 to 150 degrees with a turn radius as low as 3mm,
-              which minimizes surrounding tissue damage. In this work, we derive
-              and experimentally validate a geometric model for our steerable
-              needle design. We evaluate both manual and robotic steering of the
-              needle along a Dubins path in 7 kPa and 13 kPa tissue phantoms,
-              simulating our target clinical application in healthy and
-              unhealthy liver tissue. We conduct experiments to measure needle
-              robustness to stiffness transitions between non-homogeneous
-              tissues. We demonstrate progress towards clinical use with needle
-              tip tracking via ultrasound imaging, navigation around anatomical
-              obstacles, and integration with a robotic autonomous steering
-              system.
-            </p>
-
-            <strong>Key Responsibilities</strong>
-            <ul
-              style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Developed a new class of tape-spring steerable needles capable
-                of sharp turns (15°-150°) with a minimal turn radius of 3mm,
-                reducing tissue damage in minimally invasive procedures
-              </li>
-              <li>
-                Derived and experimentally validated a geometric model for
-                steerable needle design
-              </li>
-              <li>
-                Evaluated manual and robotic steering of the needle along Dubins
-                paths in tissue phantoms simulating healthy and unhealthy liver
-                tissues (7 kPa and 13 kPa stiffness)
-              </li>
-              <li>
-                Demonstrated needle tip tracking via ultrasound, navigation
-                around anatomical obstacles, and integration with robotic
-                autonomous steering systems
-              </li>
-            </ul>
-
-            <header
-            id="Passive_DS_Contact"
-            style="margin-top: 10px; margin-bottom: 0px"
-          >
-            <!-- Added small margin-top -->
-            <p style="text-align: center; font-size: 42px;">
-              <strong>Development of Passive Compliance Controller with Force Regulation</strong>
-            </p>
-          </header>
-
-          <div
-          style="
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 10px;
-          "
-        >
-        <div style="text-align: center;">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/0WZ7-1S0WQE?si=pVuoP3p_mcwgmpY9" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-        </div>
-      
-        <div style="text-align: center;">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/xLmZD9Djkdg?si=D9YYYq-DTeDelB7T" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-        </div>
-        </div>
-          </div>
-          <strong>Background</strong>
-          <p style="text-align: justify; font-size: 18px;">
-            The main challenge in contact-rich tasks is ensuring that the controller maintains compliance. In tasks such as insertion, where the end-effector must drag across a surface, force sensor measurements can become noisy. This noise can lead to unstable robot control. For example, if an external force suddenly pushes the end-effector from the right, the robot may retract to the left. However, in a constrained environment like a tight channel, this retraction could cause the robot to collide with the left side, triggering another reaction force that pushes it back to the right. This cycle can result in uncontrolled oscillations.
-          </p>
-          <p style="text-align: justify; font-size: 18px;">
-            To address this issue, a passive dynamical system is implemented to dissipate energy and maintain passivity. The system continuously updates its damping matrix in real time, adjusting compliance in response to external disturbances. By controlling the eigenvalues of the damping matrix, the robot can regulate the applied force and maintain a steady interaction with the surface.
-          </p>
-
-          <strong>Key Responsibilities:</strong>
-          <ul
-            style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-          >
-            <!-- Added margin-top, kept margin-bottom at 0 -->
-            <li>
-              Developed passive impedance control with force regulation on Kuka LBR IIWA robot for contact-rich tasks 
+              </div>
             </li>
             <li>
-              Developed and simulated tasks in ROS using Gazebo to optimize robot performance before real-world deployment 
-            </li>
-            <li>
-              Integrated kinematics and path-planning with camera-based object detection for versatile task execution 
-            </li>
-            <li>
-              Implemented energy tank concept to ensure controller stability for human robot collaboration 
-            </li>
-            <li>
-              Employed learning algorithm (LPVDS) in Matlab to create a stable dynamical system based on minimum amount of demonstration (less than 20)
+              <div class="title">Development of a Soft Actuator Integrated with a Variable Stiffness Link</div>
+              <div class="authors"><b>Davin Tjandra</b></div>
+              <div class="venue"><i>Bachelor's thesis, Universitas Indonesia</i> · 2022</div>
             </li>
           </ul>
 
-            <header
-              id="robot-arm-control"
-              style="margin-top: 10px; margin-bottom: 0px"
-            >
-              <!-- Added small margin-top -->
-              <p style="text-align: center; font-size: 42px;">
-                <strong>Implementation of Compliance Controller and Imitation Learning
-                  for a 6 DOF Robot Arms for Building Bracket Installation</strong>
-              </p>
-            </header>
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: auto;
-                margin-bottom: 10px;
-              "
-            >
-              <video
-                style="max-width: 800px; width: 100%; height: auto"
-                controls
-              >
-                <source src="vids/Raise_Porto.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <strong>Background</strong>
-            <p style="text-align: justify; font-size: 18px;">
-              This project consisted of two main tasks. The first was to migrate the force and compliance controller 
-              from the UR20 robot arms to the FR20 robot arms and ensure they performed as effectively as the UR20 robots. 
-              The second task was to develop an imitation learning model capable of automatically performing bracket 
-              insertion given an initial position and an estimated goal pose. The main challenge in the second task was that 
-              the perception system, which estimates the goal pose, introduced errors in orientation and translation. Therefore, 
-              the imitation learning model needed to compensate for these errors.
-            </p>
-            <strong>Key Responsibilities:</strong>
-            <ul
-              style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Implemented compliance and force control on a 6 DOF robot arm
-                for tasks that require contacts and dragging such as channel
-                search, bracket alignment, and nut tightening/loosening,
-                improving installation precision
-              </li>
-              <li>
-                Tuned control gains (stiffness, PD, error scale), achieving a
-                95% success rate in bracket installation
-              </li>
-              <li>
-                Trained and developed an imitation learning model for automated
-                bracket insertion, achieving position and orientation RMSE of <
-                0.0001 from expert trajectories
-              </li>
-              <li>
-                Automated pipeline for automatic bracket insertion data
-                collection for model training purposes
-              </li>
-              <li>
-                Prepared both the software and hardware for robot operation,
-                including launch files, controller gains, URDF, FT-sensor mount,
-                pneumatics wiring, and microcontroller and PCB wiring
-              </li>
-            </ul>
-
-            <header
-              id="depth-estimation"
-              style="margin-top: 10px; margin-bottom: 10px"
-            >
-              <!-- Added small margin-top -->
-              <p style="text-align: center; font-size: 42px;">
-                <strong>Implementation of Depth Estimation Network for Monocular Camera
-                  with Sparse LIDAR Data</strong>
-              </p>
-            </header>
-            <!-- Image added here -->
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                margin-bottom: 10px;
-              "
-            >
-              <img
-                src="images/ORB_SLAM2.jpg"
-                alt="Depth Estimation Network Image"
-                style="max-width: 800px; width: 100%; height: auto"
-              />
-            </div>
-            <strong>Background</strong>
-            <p style="text-align: justify; font-size: 18px;">
-              Final project of Upenn graduate level Learning in Robotics
-              Course
-            </p>
-            <strong>Key Responsibilities</strong>
-            <ul
-              style="margin-top: 10px; margin-bottom: 0px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Implemented a Neural Network to generate dense RGB-D depth
-                estimation images from sparse LiDAR scans and monocular camera
-                data
-              </li>
-              <li>
-                Enhanced the accuracy of RGB-D SLAM by integrating deep
-                learning-based depth completion techniques
-              </li>
-              <li>
-                Evaluated the depth completion model and SLAM pipeline using
-                diverse real-world datasets (KITTI, TUM), and created
-                environment improving generalizability and robustness
-              </li>
-            </ul>
-
-            <header
-              id="franka-robot"
-              style="margin-top: 10px; margin-bottom: 10px"
-            >
-              <!-- Added small margin-top -->
-              <p style="text-align: center; font-size: 42px;">
-                <strong>Control and Optimization of FRANKA EMIKA (Panda) Robot Arm</strong>
-              </p>
-            </header>
-            <div class="videos">
-              <div class="row">
-                <div class="col-md-4">
-                  <iframe
-                    src="https://www.youtube.com/embed/vjwg3EuP6zI"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="col-md-4">
-                  <iframe
-                    src="https://www.youtube.com/embed/Z_s7S15IcpI?si=vcAAD2LUMop7uqZK"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="col-md-4">
-                  <iframe
-                    src="https://www.youtube.com/embed/Z_s7S15IcpI?si=vcAAD2LUMop7uqZK"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-            <p style="text-align: justify; font-size: 18px;">
-              <strong>Background</strong>
-            <p style="text-align: justify; font-size: 18px;">
-              Final project of Upenn graduate level robotics course (MEAM5200)
-            </p>
-            </p>
-            <strong>Key Responsibilities:</strong>
-            <ul
-              style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Used Robot Operating System (ROS) and Python to control and
-                simulate the movement of the Franka Emika (PANDA) robot arm
-              </li>
-              <li>
-                Developed code for kinematics and dynamics control of the robot
-                (Forward Kinematics, Inverse Kinematics, Velocity Control,
-                Position Control)
-              </li>
-              <li>
-                Developed path planning algorithm to execute secondary tasks on
-                top of a main task (Bidirectional RRT, Artificial Potential
-                Field)
-              </li>
-              <li>
-                Integrated camera-based object detection technique with
-                developed kinematics and dynamics algorithm for pick and place
-                tasks
-              </li>
-            </ul>
-
-            <header
-              id="mecanum-drive"
-              style="margin-top: 10px; margin-bottom: 10px"
-            >
-              <!-- Added small margin-top -->
-              <p style="text-align: center; font-size: 42px;">
-                <strong>Development of a 4-Wheeled Mecanum Drive Mobile Base</strong> 
-              </p>
-            </header>
-            <div class="row" style="display: flex; align-items: center;">
-              <div class="col-md-6" style="height: 350px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                <img
-                  src="images/Mechatronics Final Car.png"
-                  alt="Mechatronics Final Car"
-                  style="max-height: 100%; width: auto;"
-                />
-              </div>
-              <div class="col-md-6" style="height: 315px;">
-                <iframe
-                  src="https://www.youtube.com/embed/RxnCSf2Vcbw"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  style="width: 100%; height: 100%;"
-                ></iframe>
-              </div>
-            </div>
-            <p style="text-align: justify; font-size: 18px;">
-              <strong>Background</strong>
-            <p style="text-align: justify; font-size: 18px;">
-              Final Project of Upenn graduate level Mechatronics Course
-            </p>
-            </p>
-            <strong>Key Responsibilities:</strong>
-            <ul
-              style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Developed WiFi-based control and localisation via ESP32 and
-                maintained system responsiveness and reliability
-              </li>
-              <li>
-                Employed I2C protocol for sensors and ESP-NOW for wireless
-                board-to-board communication to reduce physical connections in
-                electrical assembly by 80%
-              </li>
-              <li>
-                Utilized Solidworks, Autodesk Inventor, and Draftsight to
-                prepare design drawings and files for manufacturing
-              </li>
-            </ul>
-
-            <header
-              id="soft-actuator"
-              style="margin-top: 10px; margin-bottom: 10px"
-            >
-              <!-- Added small margin-top -->
-              <p style="text-align: center; font-size: 42px;">
-                <strong>Soft Actuator & Variable Stiffness Link</strong>
-              </p>
-            </header>
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                margin-bottom: 10px;
-              "
-            >
-              <video
-                style="max-width: 800px; width: 100%; height: auto"
-                controls
-              >
-                <source
-                  src="images/Soft Actuator 18 Degree.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <p style="text-align: justify; font-size: 18px;">
-              <strong>Abstract</strong>
-            <p style="text-align: justify; font-size: 18px;">
-              With the increasing demand for robots, their development has reached an all-time high. However, most robots 
-              currently being developed are rigid and constructed from hard materials. While this type of robot excels in 
-              precision and movement speed, it requires a complex control system to ensure smooth and accurate operation. 
-              The primary drawback of rigid robots is their inability to handle fragile objects safely. Additionally, rigid 
-              robots are often unsuitable for collaborative environments involving humans due to the hardness of their materials, 
-              which poses safety risks.
-            </p>
-            <p style="text-align: justify; font-size: 18px;">
-              To address these limitations, a pneumatic-based soft robot using silicone as the primary material was developed. 
-              This type of soft actuator has previously been created by researchers at Harvard University as a grasping mechanism 
-              for hand rehabilitation. In this study, the design of the soft actuator is modified to enhance the force it can generate, 
-              enabling its use in actuating an elbow mechanism. Furthermore, a variable stiffness link is developed, allowing the stiffness 
-              of the soft robot system to be adjusted as needed.
-            </p>
-            <p style="text-align: justify; font-size: 18px;">
-              The goal of this research is to produce a soft actuator capable of generating greater lifting force than its predecessors, 
-              making it suitable for moving a jig that simulates an elbow mechanism.
-            </p>
-            </p>
-            <strong>Key Responsibilities:</strong>
-            <ul
-              style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Design of soft actuator & Variable stiffness link that can
-                generate 9N lifting force at 37 kPa
-              </li>
-              <li>
-                When stiffens, the system provides stiffness up to 3x compare to
-                its relaxed state
-              </li>
-              <li>
-                These images illustrates the design, the actual soft actuator,
-                and the jig used to test the lifting force of the actuator
-              </li>
-            </ul>
-
-            <header
-              id="cable-robot"
-              style="margin-top: 10px; margin-bottom: 10px"
-            >
-              <!-- Added small margin-top -->
-              <p style="text-align: center; font-size: 42px;">
-                <strong>Redesign of a Cable-Driven Teleoperated Robot Arm</strong>
-              </p>
-            </header>
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                margin-bottom: 10px;
-              "
-            >
-              <img
-                src="images/Cable_driven_robot_arms.png"
-                alt="Depth Estimation Network Image"
-                style="max-width: 600px; width: 100%; height: auto"
-              />
-            </div>
-            <strong>Key Responsibilities:</strong>
-            <ul
-              style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Cable Drive is used to reduce the moment of inertia of the robot
-                arm
-              </li>
-              <li>
-                The motor can be placed closer to the fixed support (shoulder)
-              </li>
-              <li>
-                Less material is needed on the lower arm of the robot reducing
-                the overall weight of the robot arm
-              </li>
-              <li>
-                The pulley mechanism on the elbow increases torque by 20 x
-              </li>
-            </ul>
-
-            <header
-              id="shell-eco"
-              style="margin-top: 10px; margin-bottom: 10px"
-            >
-              <!-- Added small margin-top -->
-              <p style="text-align: center; font-size: 42px;">
-                <strong>Shell Eco Marathon Virtual Offtrack 2021</strong>
-              </p>
-            </header>
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                margin-bottom: 10px;
-              "
-            >
-              <img
-                src="images/SEM.png"
-                alt="Depth Estimation Network Image"
-                style="max-width: 800px; width: 100%; height: auto"
-              />
-            </div>
-            <strong>Key Responsibilities:</strong>
-
-            <ul
-              style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Increased fuel efficiency by reducing component's weight and
-                optimizing flow around the car prototype
-              </li>
-              <li>
-                Utilization of topology optimization to reduce components’
-                weight (54% mass reduction on average)
-              </li>
-              <li>
-                Vortex generators as passive flow control to reduce drag in the
-                car by 14.74%
-              </li>
-            </ul>
-
-            <header id="ebike" style="margin-top: 10px; margin-bottom: 10px">
-              <!-- Added small margin-top -->
-              <p style="text-align: center; font-size: 42px;">
-                <strong>Development of a High Torque and Self-Rechargeable Conversion
-                  E-bike with Knockdown System</strong>
-              </p>
-            </header>
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: auto;
-                margin-bottom: 10px;
-              "
-            >
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/DO-1V5IpRmU?si=ujoP-DSYoYUJKUPu"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <strong>Key Responsibilities:</strong>
-            <ul
-              style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Developed a high torque mountain bike conversion with pinion and
-                pulley system (increased torque by 8.75x)
-              </li>
-              <li>
-                Won the best presentation at INSITEF 2022 conference (the 3rd
-                international science and technology fair in conjunction with
-                the 3rd mechanical engineering joint symposium)
-              </li>
-            </ul>
-          </article>
-
-          <article id="publications" class="box post post-excerpt">
-            <header style="margin-bottom: 10px">
-              <h2 style="text-align: center; font-size: 72px;"><a href="#">Publications</a></h2>
-              <p style="text-align: center">2D Steerable Needle</p>
-            </header>
-            <p style="text-align: justify; font-size: 18px;">
-              Steerable Tape-Spring Needle for Autonomous Sharp Turns Through
-              Tissue Omar Abdoun, Davin Tjandra, Katie Yin, Pablo Kurzan,
-              Jessica Yin, Mark Yim bioRxiv 2024.09.22.614377; doi:
-              https://doi.org/10.1101/2024.09.22.614377
-            </p>
-            <header style="margin-bottom: 10px">
-              <p style="text-align: center">
-                Development of a Soft Actuator and Variable Stiffness Link
-              </p>
-            </header>
-            <p style="text-align: justify; font-size: 18px;">
-              Tjandra, Davin (2022). Pengembangan Soft Actuator dengan Variable
-              Stiffness Link (Development of Soft Actuator Integrated with
-              Variable Stiffness Link) [Unpublished Bachelor’s Degree Thesis,
-              Universitas Indonesia]
-            </p>
-            <header style="margin-bottom: 10px">
-              <p style="text-align: center">E-Bike Conversion Patent</p>
-            </header>
-            <p style="text-align: justify; font-size: 18px;">
-              Davin., Mughni, M. I., Dani, K. D., Lianto, A. E., Dhelika, R.
-              (2021). Sepeda listrik berbasis konversi dengan fitur torsi
-              tinggi, pengisian daya dari gerak putar roda, dan sistem lepas
-              pasang (high torque and self rechargeable conversion e-bike with
-              knockdown system). Berita Resmi Paten Sederhana Seri-A (Indonesia
-              Serie-A Patent-S00202111212)
-              https://dgip.go.id/uploads/berita_resmi/file/697e9c08a34dd5b0f49310c339c5e648.pdf
-              (page 29)
-            </p>
-          </article>
-
-          <article id="awards" class="box post post-excerpt">
-            <header style="margin-bottom: 10px">
-              <h2 style="text-align: center; font-size: 72px;">
-                <a href="#">Awards and Achievements</a>
-              </h2>
-            </header>
-            <ul
-              style="margin-top: 10px; margin-bottom: 10px; text-align: justify; font-size: 18px;"
-            >
-              <!-- Added margin-top, kept margin-bottom at 0 -->
-              <li>
-                Best Presenter at INSITEF 2022 (the 3rd international science
-                and technology fair in conjunction with the 3rd mechanical
-                engineering joint symposium)
-              </li>
-              <li>
-                Safety Award Runner-Up of Shell Eco-Marathon Virtual Offtrack
-                Asia 2021
-              </li>
-              <li>
-                Research Grant Fund Awardee of Tanoto Student Research Award
-                2021
-              </li>
-              <li>
-                Finalist of ITS Integrated Petroleum Days 2021 (5th Place)
-              </li>
-              <li>TAFE NSW Excellence Award 2019</li>
-            </ul>
-          </article>
+          <h3 style="margin: 48px 0 12px">Awards</h3>
+          <ul class="awards">
+            <li><b>Best Presenter</b>, INSITEF 2022</li>
+            <li><b>Safety Award Runner-Up</b>, Shell Eco-marathon Virtual Off-track Asia 2021</li>
+            <li><b>Research Grant</b>, Tanoto Student Research Award 2021</li>
+            <li><b>Finalist (5th place)</b>, ITS Integrated Petroleum Days 2021</li>
+            <li><b>Excellence Award</b>, TAFE NSW 2019</li>
+          </ul>
         </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 Davin Tjandra</span>
+        <a href="mailto:davintjan@gmail.com">davintjan@gmail.com</a>
       </div>
-    </div>
-
-    <!-- Sidebar -->
-    <div id="sidebar">
-     
-      <!-- Logo -->
-      <h1 id="logo"><a href="#">Portfolio</a></h1>
-
-      <!-- Nav -->
-      <nav id="nav">
-        <ul>
-          <li class="current"><a href="#">About Me</a></li>
-
-          <li>
-            <a href="#projects">Projects</a>
-            <ul>
-              <li><a href="#steerable_needle">2D Steerable Needles</a></li>
-              <li>
-                <a href="#Passive_DS_Contact"
-                  >Passive Contact DS</a
-                >
-              </li>
-              <li>
-                <a href="#robot-arm-control"
-                  >Construction Robot Arm Control and Learning</a
-                >
-              </li>
-              <li>
-                <a href="#depth-estimation"
-                  >Sparse to Dense LIDAR with ORB-SLAM2</a
-                >
-              </li>
-              <li>
-                <a href="#franka-robot"
-                  >Control and Optimization of Franka Robot Arm</a
-                >
-              </li>
-              <li>
-                <a href="#mecanum-drive">4 Wheeled Mecanum Drive Mobile Base</a>
-              </li>
-              <li>
-                <a href="#soft-actuator"
-                  >Soft Actuator and Variable Stiffness Link</a
-                >
-              </li>
-              <li>
-                <a href="#cable-robot">Cable Driven Teleoperated Robot Arm</a>
-              </li>
-              <li>
-                <a href="#shell-eco"
-                  >Shell Eco Marathon Virtual Offtrack 2021</a
-                >
-              </li>
-              <li><a href="#ebike">E-Bike Conversion</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="#publications">Publications</a>
-          </li>
-
-          <li>
-            <a href="#awards">Awards</a>
-          </li>
-
-          <li><a href="#">Contact Me</a></li>
-        </ul>
-      </nav>
-
-      <!-- Search -->
-      <!-- <section class="box search">
-						<form method="post" action="#">
-							<input type="text" class="text" name="search" placeholder="Search" />
-						</form>
-					</section> -->
-
-      <!-- Copyright -->
-      <ul id="copyright">
-        <li>&copy; Untitled.</li>
-        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-      </ul>
-    </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-      const openBtn = document.querySelector("#open_sidebar");
-      const closeBtn = document.querySelector("#close_sidebar");
-      const sidebar = document.querySelector("#sidebar");
-      openBtn.addEventListener("click", () => {
-        sidebar.classList.add("active");
-        openBtn.classList.remove("active");
-        closeBtn.classList.add("active");
-      });
-      closeBtn.addEventListener("click", () => {
-        sidebar.classList.remove("active");
-        openBtn.classList.add("active");
-        closeBtn.classList.remove("active");
-      });
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    </footer>
   </body>
 </html>

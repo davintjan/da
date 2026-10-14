@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Depth Completion for SLAM · Davin Tjandra</title>
+    <meta name="description" content="A network that completes sparse LiDAR into dense depth to improve RGB-D SLAM." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="../index.html">Davin Tjandra</a>
+        <nav class="nav">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#publications" class="hide-sm">Publications</a>
+          <a href="https://drive.google.com/file/d/1XE6uDH8KvG32tiVJxi-hi0fYt_D9xmmk/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap narrow">
+      <a class="back" href="../index.html#projects">← All projects</a>
+
+      <div class="project-head">
+        <h1>Depth Completion for RGB-D SLAM</h1>
+        <p class="lede">A network that turns sparse LiDAR and a monocular camera into dense depth, used to improve ORB-SLAM2 accuracy.</p>
+        <div class="facts">
+          <span><b>Course</b>Learning in Robotics, University of Pennsylvania</span>
+          <span><b>Year</b>2023</span>
+          <span><b>Stack</b>PyTorch, AWS, ORB-SLAM2</span>
+        </div>
+      </div>
+
+      <div class="media">
+        <figure>
+          <img src="../img/ORB_SLAM2.jpg" alt="Network output compared with ground truth, and the resulting SLAM maps" />
+          <figcaption>Network output versus ground truth (top) and the resulting SLAM point clouds (bottom).</figcaption>
+        </figure>
+      </div>
+
+      <div class="prose">
+        <h2>Problem</h2>
+        <p>
+          LiDAR gives accurate but sparse depth, and a monocular camera gives no
+          depth at all. RGB-D SLAM works best with dense depth for every pixel.
+        </p>
+
+        <h2>Approach</h2>
+        <ul>
+          <li>Trained a neural network on AWS that predicts dense depth from sparse LiDAR scans and camera images.</li>
+          <li>Fed the completed depth into an RGB-D SLAM pipeline (ORB-SLAM2).</li>
+        </ul>
+
+        <h2>Result</h2>
+        <p>
+          Deep-learning depth completion improved SLAM accuracy. The model and
+          pipeline were evaluated on real-world datasets (KITTI, TUM) and in a
+          custom environment to check that they generalize.
+        </p>
+      </div>
+
+      <a class="back" href="../index.html#projects" style="margin-bottom: 64px">← All projects</a>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 Davin Tjandra</span>
+        <a href="mailto:davintjan@gmail.com">davintjan@gmail.com</a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

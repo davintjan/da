@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Franka Panda Control · Davin Tjandra</title>
+    <meta name="description" content="Kinematics, control and path planning on the Franka Panda for pick-and-place." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="../index.html">Davin Tjandra</a>
+        <nav class="nav">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#publications" class="hide-sm">Publications</a>
+          <a href="https://drive.google.com/file/d/1XE6uDH8KvG32tiVJxi-hi0fYt_D9xmmk/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap narrow">
+      <a class="back" href="../index.html#projects">← All projects</a>
+
+      <div class="project-head">
+        <h1>Control and Planning on the Franka Panda</h1>
+        <p class="lede">Kinematics, velocity control and path planning with camera-based object detection for pick-and-place.</p>
+        <div class="facts">
+          <span><b>Course</b>MEAM 5200, University of Pennsylvania</span>
+          <span><b>Year</b>2023</span>
+          <span><b>Stack</b>Python, ROS</span>
+        </div>
+      </div>
+
+      <div class="media">
+        <button class="yt" data-id="Z_s7S15IcpI" aria-label="Play video: Franka Panda in simulation"></button>
+      </div>
+
+      <div class="prose">
+        <h2>Problem</h2>
+        <p>
+          The final project of Penn's graduate robotics course: control a Franka
+          Emika Panda to detect blocks with a camera and pick and place them.
+        </p>
+
+        <h2>Approach</h2>
+        <ul>
+          <li>Forward and inverse kinematics, velocity control and position control, in Python with ROS.</li>
+          <li>Path planning with bidirectional RRT and artificial potential fields, including secondary tasks on top of the main task.</li>
+          <li>Camera-based object detection connected to the kinematics and control code.</li>
+        </ul>
+
+        <h2>Result</h2>
+        <p>
+          The full pipeline detects blocks with the camera and picks and places
+          them; the video shows it running in simulation.
+        </p>
+      </div>
+
+      <a class="back" href="../index.html#projects" style="margin-bottom: 64px">← All projects</a>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 Davin Tjandra</span>
+        <a href="mailto:davintjan@gmail.com">davintjan@gmail.com</a>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
